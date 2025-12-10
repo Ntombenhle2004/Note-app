@@ -41,7 +41,7 @@ export default function RegisterScreen() {
       console.log('Register function returned:', success);
       if (success) {
         Alert.alert('Success', 'Registration successful!', [
-          { text: 'OK', onPress: () => router.replace('/(tabs)') }
+          { text: 'OK', onPress: () => router.replace('/tabs') }
         ]);
       } else {
         Alert.alert('Error', 'Email already exists or registration failed');
