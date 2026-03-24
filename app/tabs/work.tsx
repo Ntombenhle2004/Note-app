@@ -95,10 +95,9 @@ export default function WorkNotesScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Work Notes</Text>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search work notes..."
+          placeholder="Search..."
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
@@ -111,9 +110,9 @@ export default function WorkNotesScreen() {
         contentContainerStyle={styles.notesList}
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="briefcase-outline" size={64} color="#ccc" />
+        
             <Text style={styles.emptyText}>
-              {searchQuery ? 'No work notes found' : 'No work notes yet. Create your first work note!'}
+              {searchQuery ? 'No work notes found' : 'No work notes yet. '}
             </Text>
           </View>
         }

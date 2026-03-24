@@ -103,7 +103,6 @@ export default function AllNotesScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerTop}>
-          <Text style={styles.headerTitle}>All Notes</Text>
           <TouchableOpacity
             style={styles.profileButton}
             onPress={() => router.push('/profile')}
@@ -113,7 +112,7 @@ export default function AllNotesScreen() {
         </View>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search notes..."
+          placeholder="Search..."
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
@@ -154,9 +153,9 @@ export default function AllNotesScreen() {
         contentContainerStyle={styles.notesList}
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="document-text-outline" size={64} color="#ccc" />
+            
             <Text style={styles.emptyText}>
-              {searchQuery ? 'No notes found' : 'No notes yet. Create your first note!'}
+              {searchQuery ? 'No notes found' : 'No notes yet. '}
             </Text>
           </View>
         }

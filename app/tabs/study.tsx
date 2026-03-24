@@ -95,10 +95,9 @@ export default function StudyNotesScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Study Notes</Text>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search study notes..."
+          placeholder="Search..."
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
@@ -111,9 +110,9 @@ export default function StudyNotesScreen() {
         contentContainerStyle={styles.notesList}
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="book-outline" size={64} color="#ccc" />
+           
             <Text style={styles.emptyText}>
-              {searchQuery ? 'No study notes found' : 'No study notes yet. Create your first study note!'}
+              {searchQuery ? 'No study notes found' : 'No study notes yet. '}
             </Text>
           </View>
         }

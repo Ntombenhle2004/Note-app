@@ -95,10 +95,9 @@ export default function PersonalNotesScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Personal Notes</Text>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search personal notes..."
+          placeholder="Search..."
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
@@ -111,9 +110,8 @@ export default function PersonalNotesScreen() {
         contentContainerStyle={styles.notesList}
         ListEmptyComponent={
           <View style={styles.emptyState}>
-            <Ionicons name="person-outline" size={64} color="#ccc" />
             <Text style={styles.emptyText}>
-              {searchQuery ? 'No personal notes found' : 'No personal notes yet. Create your first personal note!'}
+              {searchQuery ? 'No personal notes found' : 'No personal notes yet.'}
             </Text>
           </View>
         }
