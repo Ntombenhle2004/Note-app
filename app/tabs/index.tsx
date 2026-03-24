@@ -54,8 +54,8 @@ export default function AllNotesScreen() {
 
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
-      case 'work': return '#FF9500';
-      case 'study': return '#34C759';
+      case 'work': return 'blue';
+      case 'study': return 'orange';
       case 'personal': return 'black';
       default: return '#8E8E93';
     }

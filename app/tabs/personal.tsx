@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categoryBadge: {
-    backgroundColor: '#AF52DE',
+    backgroundColor: 'black',
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,

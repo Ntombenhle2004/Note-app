@@ -87,7 +87,7 @@ export default function StudyNotesScreen() {
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#007AFF" />
+        <ActivityIndicator size="large" color="black" />
       </View>
     );
   }
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categoryBadge: {
-    backgroundColor: '#34C759',
+    backgroundColor: 'orange',
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 12,

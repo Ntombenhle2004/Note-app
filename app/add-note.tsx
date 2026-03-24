@@ -49,10 +49,10 @@ export default function AddNoteScreen() {
     >
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
         <View style={styles.form}>
-          <Text style={styles.label}>Title (Optional)</Text>
+          <Text style={styles.label}>Name</Text>
           <TextInput
             style={styles.titleInput}
-            placeholder="Enter note title..."
+            placeholder="Note Name"
             value={title}
             onChangeText={setTitle}
             editable={!isLoading}
@@ -80,10 +80,10 @@ export default function AddNoteScreen() {
             ))}
           </View>
 
-          <Text style={styles.label}>Content *</Text>
+          <Text style={styles.label}>Description</Text>
           <TextInput
             style={styles.contentInput}
-            placeholder="Enter your note content..."
+            placeholder="Note description"
             value={content}
             onChangeText={setContent}
             multiline
@@ -106,7 +106,7 @@ export default function AddNoteScreen() {
               disabled={isLoading}
             >
               <Text style={styles.saveButtonText}>
-                {isLoading ? 'Saving...' : 'Save Note'}
+                {isLoading ? 'Saving...' : 'Add'}
               </Text>
             </TouchableOpacity>
           </View>

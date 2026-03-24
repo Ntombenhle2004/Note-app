@@ -105,16 +105,19 @@ export default function EditNoteScreen() {
   }
 
   return (
-    <KeyboardAvoidingView 
-      style={styles.container} 
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+      >
         <View style={styles.form}>
-          <Text style={styles.label}>Title (Optional)</Text>
+          <Text style={styles.label}>Name</Text>
           <TextInput
             style={styles.titleInput}
-            placeholder="Enter note title..."
+            placeholder="Note Name"
             value={title}
             onChangeText={setTitle}
             editable={!isLoading && !isDeleting}
@@ -127,25 +130,27 @@ export default function EditNoteScreen() {
                 key={cat}
                 style={[
                   styles.categoryButton,
-                  category === cat && styles.categoryButtonActive
+                  category === cat && styles.categoryButtonActive,
                 ]}
                 onPress={() => setCategory(cat)}
                 disabled={isLoading || isDeleting}
               >
-                <Text style={[
-                  styles.categoryButtonText,
-                  category === cat && styles.categoryButtonTextActive
-                ]}>
+                <Text
+                  style={[
+                    styles.categoryButtonText,
+                    category === cat && styles.categoryButtonTextActive,
+                  ]}
+                >
                   {cat}
                 </Text>
               </TouchableOpacity>
             ))}
           </View>
 
-          <Text style={styles.label}>Content *</Text>
+          <Text style={styles.label}>Description</Text>
           <TextInput
             style={styles.contentInput}
-            placeholder="Enter your note content..."
+            placeholder="Note description"
             value={content}
             onChangeText={setContent}
             multiline
@@ -155,7 +160,10 @@ export default function EditNoteScreen() {
 
           <View style={styles.actions}>
             <TouchableOpacity
-              style={[styles.deleteButton, (isLoading || isDeleting) && styles.buttonDisabled]}
+              style={[
+                styles.deleteButton,
+                (isLoading || isDeleting) && styles.buttonDisabled,
+              ]}
               onPress={handleDelete}
               disabled={isLoading || isDeleting}
             >
@@ -165,24 +173,30 @@ export default function EditNoteScreen() {
                 <Ionicons name="trash-outline" size={20} color="#FF3B30" />
               )}
             </TouchableOpacity>
-            
+
             <TouchableOpacity
-              style={[styles.cancelButton, (isLoading || isDeleting) && styles.buttonDisabled]}
+              style={[
+                styles.cancelButton,
+                (isLoading || isDeleting) && styles.buttonDisabled,
+              ]}
               onPress={() => router.back()}
               disabled={isLoading || isDeleting}
             >
               <Text style={styles.cancelButtonText}>Cancel</Text>
             </TouchableOpacity>
-            
+
             <TouchableOpacity
-              style={[styles.saveButton, (isLoading || isDeleting) && styles.buttonDisabled]}
+              style={[
+                styles.saveButton,
+                (isLoading || isDeleting) && styles.buttonDisabled,
+              ]}
               onPress={handleSave}
               disabled={isLoading || isDeleting}
             >
               {isLoading ? (
                 <ActivityIndicator size="small" color="white" />
               ) : (
-                <Text style={styles.saveButtonText}>Save Changes</Text>
+                <Text style={styles.saveButtonText}>Edit</Text>
               )}
             </TouchableOpacity>
           </View>
