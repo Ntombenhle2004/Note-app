@@ -56,7 +56,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const hashPassword = async (password: string): Promise<string> => {
-    // Simple hash for demo purposes - in production, use proper hashing
     return btoa(password + 'salt');
   };
 
@@ -109,7 +108,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (users[userEmail]) {
         console.log('User already exists:', userEmail);
-        return false; // User already exists
+        return false; 
       }
       
       const hashedPassword = await hashPassword(password);
@@ -166,10 +165,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       if (!userRecord) return false;
       
-      // Update email if provided
       if (email && email.toLowerCase().trim() !== oldEmail) {
         const newEmail = email.toLowerCase().trim();
-        if (users[newEmail]) return false; // Email already exists
+        if (users[newEmail]) return false; 
         
         users[newEmail] = { ...userRecord, email: newEmail };
         delete users[oldEmail];
@@ -177,14 +175,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         user.email = newEmail;
       }
       
-      // Update password if provided
       if (password) {
         const hashedPassword = await hashPassword(password);
         const emailKey = user.email;
         users[emailKey].password = hashedPassword;
       }
-      
-      // Update username if provided
+  
       if (username) {
         const emailKey = user.email;
         users[emailKey].username = username.trim();

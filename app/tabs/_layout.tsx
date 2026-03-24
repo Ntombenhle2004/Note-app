@@ -8,7 +8,7 @@ export default function TabLayout() {
     <ProtectedRoute>
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: "#007AFF",
+          tabBarActiveTintColor: "black",
           tabBarInactiveTintColor: "gray",
           tabBarStyle: {
             backgroundColor: "white",

@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   backButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: 'black',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 8,
@@ -266,8 +266,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   categoryButtonActive: {
-    backgroundColor: '#007AFF',
-    borderColor: '#007AFF',
+    backgroundColor: 'black',
+    borderColor: 'black',
   },
   categoryButtonText: {
     fontSize: 14,
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
     flex: 2,
     padding: 15,
     borderRadius: 8,
-    backgroundColor: '#007AFF',
+    backgroundColor: 'black',
     alignItems: 'center',
   },
   saveButtonText: {

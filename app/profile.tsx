@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sectionButtonActive: {
-    backgroundColor: '#007AFF',
+    backgroundColor: 'black',
     borderRadius: 10,
   },
   sectionButtonText: {
@@ -319,7 +319,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: 'black',
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',

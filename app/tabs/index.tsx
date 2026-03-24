@@ -56,7 +56,7 @@ export default function AllNotesScreen() {
     switch (category.toLowerCase()) {
       case 'work': return '#FF9500';
       case 'study': return '#34C759';
-      case 'personal': return '#007AFF';
+      case 'personal': return 'black';
       default: return '#8E8E93';
     }
   };
@@ -94,7 +94,7 @@ export default function AllNotesScreen() {
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#007AFF" />
+        <ActivityIndicator size="large" color="black" />
       </View>
     );
   }
@@ -108,7 +108,7 @@ export default function AllNotesScreen() {
             style={styles.profileButton}
             onPress={() => router.push('/profile')}
           >
-            <Ionicons name="person-outline" size={24} color="#007AFF" />
+            <Ionicons name="person-outline" size={24} color="black" />
           </TouchableOpacity>
         </View>
         <TextInput
@@ -141,7 +141,7 @@ export default function AllNotesScreen() {
             <Ionicons 
               name={sortOrder === 'asc' ? 'arrow-up' : 'arrow-down'} 
               size={16} 
-              color={sortOrder === 'asc' ? '#007AFF' : '#666'} 
+              color={sortOrder === 'asc' ? 'black' : '#666'} 
             />
           </TouchableOpacity>
         </View>
@@ -228,8 +228,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sortButtonActive: {
-    backgroundColor: '#007AFF',
-    borderColor: '#007AFF',
+    backgroundColor: 'black',
+    borderColor: 'black',
   },
   sortButtonText: {
     fontSize: 12,
@@ -250,8 +250,8 @@ const styles = StyleSheet.create({
     width: 40,
   },
   orderButtonActive: {
-    backgroundColor: '#007AFF',
-    borderColor: '#007AFF',
+    backgroundColor: 'black',
+    borderColor: 'black',
   },
   notesList: {
     padding: 15,
@@ -311,7 +311,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 30,
     right: 30,
-    backgroundColor: '#007AFF',
+    backgroundColor: 'black',
     width: 56,
     height: 56,
     borderRadius: 28,
